@@ -1,0 +1,22 @@
+{
+  "name": "amazona",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node ./backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corgii-123/-amazona.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corgii-123/-amazona/issues"
+  },
+  "homepage": "https://github.com/corgii-123/-amazona#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
