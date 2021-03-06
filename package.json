@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/corgii-123/-amazona#readme",
   "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-plugin-react": "^7.22.0",
     "express": "^4.17.1"
   }
 }
