@@ -43,7 +43,7 @@ export default function HomeScreen(props) {
                   <div>状态</div>
                   <div>
                     {product.countInStock > 0 ? <span className="success">有货</span> : 
-                    <span className="error">无货</span>}
+                    <span className="danger">无货</span>}
                   </div>
                 </div>
               </li>

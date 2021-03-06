@@ -13,6 +13,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  height: 100%;
+}
+
 /* Wrapper */
 .grid-container {
   display: grid;
@@ -178,6 +182,17 @@ img.large {
   color: #20a020;
 }
 
-.error {
+.danger {
   color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: #a02020;
+  background-color: tomato;
 }

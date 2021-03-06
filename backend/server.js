@@ -1,5 +1,5 @@
-const express = require('express')
-const data = require('./data')
+import express from 'express'
+import data from './data.js'
 
 const app = express()
 
@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
   res.send('server is ready')
 })
 
-app.get('/api/product', (req, res) => {
+app.get('/api/products', (req, res) => {
   res.send(data.products)
 })
 

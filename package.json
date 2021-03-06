@@ -2,8 +2,9 @@
   "name": "amazona",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon --watch backend --exec node ./backend/server.js"
+    "start": "nodemon --watch backend --exec node --experimental-modules ./backend/server.js"
   },
   "repository": {
     "type": "git",
