@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Rating from '../components/Rating'
 import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -7,6 +7,7 @@ import LoadingBox from '../components/LoadingBox'
 import { detailsProduct } from '../actions/productActions'
 
 export default function HomeScreen(props) {
+  const [qty, setQty] = useState(1)
   const productDetails = useSelector(state => state.productDetails)
   const productId = props.match.params.id
   const {product, loading, error} = productDetails
@@ -14,6 +15,9 @@ export default function HomeScreen(props) {
   useEffect(() => {
     dispatch(detailsProduct(productId))
   }, [dispatch, productId])
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qty=${qty}`)
+  }
   return (
     <>
       {
@@ -60,9 +64,31 @@ export default function HomeScreen(props) {
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <button className="primary block">添加至购物车</button>
-                  </li>
+                      {
+                        product.countInStock > 0 && (
+                          <>
+                            <li>
+                              <div className="row">
+                                <div>数量</div>
+                                <div>
+                                  <select value={qty} onChange={e => setQty(e.target.value)}>
+                                    {
+                                      [...new Array(product.countInStock).keys()].map(
+                                        x => (
+                                          <option key={x} value={x + 1}>{x + 1}</option>
+                                        )
+                                      )
+                                    }
+                                  </select>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <button onClick={addToCartHandler} className="primary block">添加至购物车</button>
+                            </li>  
+                          </>
+                        )
+                  }
                 </ul>
               </div>
             </div>
