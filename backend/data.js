@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs'
 const data = {
+  users: [
+    {
+      name: 'Corgi',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123', 8),
+      isAdmin: true
+    },
+    {
+      name: 'Haski',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123', 8),
+      isAdmin: false
+    }
+  ],
   products: [
     {
-      _id: '1',
+      
       name: '男士修身T恤',
       category: 'T恤',
       image: '/images/p1.jpg',
@@ -13,7 +28,7 @@ const data = {
       description: '高质量修身简洁款'
     },
     {
-      _id: '2',
+      
       name: 'Adidas运动T恤',
       category: 'T恤',
       image: '/images/p2.jpg',
@@ -25,7 +40,7 @@ const data = {
       description: '纯棉运动款'
     },
     {
-      _id: '3',
+    
       name: '男士宽松衬衫',
       category: '衬衫',
       image: '/images/p3.jpg',
@@ -37,7 +52,7 @@ const data = {
       description: '宽松款'
     },
     {
-      _id: '4',
+      
       name: '男士修身裤子',
       category: '裤子',
       image: '/images/p4.jpg',
@@ -49,7 +64,7 @@ const data = {
       description: '修身西裤'
     },
     {
-      _id: '5',
+    
       name: '彪马运动裤',
       category: 'T恤运动裤',
       image: '/images/p5.jpg',
@@ -61,7 +76,7 @@ const data = {
       description: '运动裤'
     },
     {
-      _id: '6',
+   
       name: 'Adidas运动裤',
       category: '运动裤',
       image: '/images/p6.jpg',

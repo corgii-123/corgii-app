@@ -5,3 +5,4 @@
 * react
 * express
 * redux
+* mongoDB
