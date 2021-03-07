@@ -119,6 +119,15 @@ a.brand {
   font-weight: bold;
 }
 
+.badge {
+  background-color: #f02020;
+  color: #f8f8f8;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin: 0.2rem;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -142,9 +151,18 @@ a.brand {
   flex: 2 1 50rem;
 }
 
+.min-30 {
+  min-width: 30rem;
+}
+
 /* image */
 img {
   border-radius: 0.5rem;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
 }
 
 img.medium {
