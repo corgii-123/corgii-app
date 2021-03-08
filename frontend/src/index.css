@@ -205,6 +205,10 @@ img.large {
 }
 
 /* alert */
+.loading {
+  display: block!important;
+}
+
 .success {
   color: #20a020;
 }

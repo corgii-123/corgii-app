@@ -3,6 +3,6 @@
 ******
 **目前使用的技术栈包括**
 * react
-* express
+* nodejs
 * redux
 * mongoDB
