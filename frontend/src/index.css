@@ -245,6 +245,12 @@ img.large {
   display: block;
 }
 
+.form>div>div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 /* dropdown */
 .dropdown {
   display: inline-block;
