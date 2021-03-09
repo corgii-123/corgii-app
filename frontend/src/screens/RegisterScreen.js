@@ -42,7 +42,7 @@ export default function Register(props) {
         <div>
           <label htmlFor="name">用户名</label>
           <input
-            type="name"
+            type="text"
             id="name"
             placeholder="请输入用户名"
             required
