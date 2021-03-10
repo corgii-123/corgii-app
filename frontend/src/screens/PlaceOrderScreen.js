@@ -10,9 +10,9 @@ export default function PlaceOrderScreen(props) {
   }
   const toPrice = (num) => (Number(num.toFixed(2)))
   cart.itemsPrice = toPrice(cart.cartItems.reduce((x, y) => x + y.qty * y.price, 0))
-  cart.shipping = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10)
+  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10)
   cart.taxPrice = toPrice(0.15 * cart.itemsPrice)
-  cart.totalPrice = cart.itemsPrice + cart.shipping + cart.taxPrice
+  cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice
 
   const placeOrderHandler = () => {
     

@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import userRouter from './routers/userRouter.js'
 import productRouter from './routers/productRouter.js'
 import dotenv from 'dotenv'
+import orderRouter from './routers/orderRouter.js'
 
 dotenv.config()
 
@@ -22,6 +23,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://root:root@localhost:27017
 // 使用数据库
 app.use('/api/users', userRouter)
 app.use('/api/products', productRouter)
+app.use('/api/orders', orderRouter)
 
 // 错误处理中间件
 app.use((err, req, res, next) => {
