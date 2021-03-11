@@ -9,24 +9,23 @@ orderRouter.post(
   '/',
   isAuth,
   expressAsyncHandler(async (req, res) => {
-  if (req.body.orderItems.length === 0) {
-    res.status(400).send({message: 'Cart is empty'})
-  } else {
-    const order = new Order({
-      orderItems: req.body.orderItems,
-      shippingAddress: req.body.shippingAddress,
-      itemsPrice: req.body.itemsPrice,
-      shippingPrice: req.body.shippingPrice,
-      taxPrice: req.body.taxPrice,
-      totalPrice: req.body.totalPrice,
-      paymentMethod: req.body.paymentMethod,
-      user: req.user._id
-    })
-    const createOrder = await order.save()
-    res.status(201).send({message: 'New Order Created', order: createOrder})
-  }
-  }
-  )
+    if (req.body.orderItems.length === 0) {
+      res.status(400).send({message: 'Cart is empty'})
+    } else {
+      const order = new Order({
+        orderItems: req.body.orderItems,
+        shippingAddress: req.body.shippingAddress,
+        itemsPrice: req.body.itemsPrice,
+        shippingPrice: req.body.shippingPrice,
+        taxPrice: req.body.taxPrice,
+        totalPrice: req.body.totalPrice,
+        paymentMethod: req.body.paymentMethod,
+        user: req.user._id
+      })
+      const createOrder = await order.save()
+      res.status(201).send({message: 'New Order Created', order: createOrder})
+    }
+  })
 )
 
 export default orderRouter
