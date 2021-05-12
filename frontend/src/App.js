@@ -10,6 +10,7 @@ import RegisterScreen from './screens/RegisterScreen'
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
 
 function App() {
   const cart = useSelector(state => state.cart)
@@ -25,7 +26,7 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <Link to="/index" className="brand">🛫 amazona</Link>
+            <Link to="/index" className="brand">🛫 Corgii购物网</Link>
           </div>
           <div>
             <Link to="/cart">购物车{cartItems.length > 0 &&
@@ -59,6 +60,7 @@ function App() {
             <Route path="/shipping" component={ShippingAddressScreen} />
             <Route path="/payment" component={PaymentMethodScreen} />
             <Route path="/placeorder" component={PlaceOrderScreen} />
+            <Route path="/order/:id" component={OrderScreen} />
             <Redirect to="/" />
           </Switch>
         </main>
