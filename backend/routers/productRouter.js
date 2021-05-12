@@ -10,11 +10,11 @@ productRouter.get('/', expressAsyncHandler(async (req, res) => {
   res.send(products)
 }))
 
-productRouter.get('/seed', expressAsyncHandler(async (req, res) => {
-  await Product.remove()
-  const createProducts = await Product.insertMany(data.products)
-  res.send({createProducts})
-}))
+// productRouter.get('/seed', expressAsyncHandler(async (req, res) => {
+//   await Product.remove()
+//   const createProducts = await Product.insertMany(data.products)
+//   res.send({createProducts})
+// }))
 
 productRouter.get('/:id', expressAsyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id)

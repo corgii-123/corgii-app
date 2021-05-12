@@ -16,7 +16,6 @@ const data = {
   ],
   products: [
     {
-      
       name: '男士修身T恤',
       category: 'T恤',
       image: '/images/p1.jpg',
